@@ -1,0 +1,37 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Cria uma instância ECS em uma subnet privada para ser usada como bastion host
+
+Parameters:
+
+  TableName:
+    Type: String
+    Default: Customer
+  
+  Owner:
+    Type: String
+    Default: tg
+
+Resources:
+
+  EC2:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Ref TableName
+      AttributeDefinitions:
+        - AttributeName: customer_id
+          AttributeType: S
+        - AttributeName: birth_at
+          AttributeType: S
+      KeySchema:
+        - AttributeName: customer_id
+          KeyType: HASH
+        - AttributeName: birth_at
+          KeyType: RANGE
+      BillingMode: PAY_PER_REQUEST
+      ProvisionedThroughput:
+        ReadCapacityUnits: 0
+        WriteCapacityUnits: 0
+      Tags:
+        - Key: Owner
+          Value: !Ref Owner
