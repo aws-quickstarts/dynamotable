@@ -14,7 +14,7 @@ Parameters:
 
 Resources:
 
-  EC2:
+  Table:
     Type: AWS::DynamoDB::Table
     Properties:
       TableName: !Ref TableName
