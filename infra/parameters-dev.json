@@ -1,6 +1,4 @@
 {
     "Parameters": {
-        "TableName": "Customer",
-        "Owner": "tg"
     }
 }

@@ -1,4 +1,4 @@
 # DynamoDB
 
-Esse arquivo cria:
-- Uma tabela
+This project creates:
+- DynamoDB Table;

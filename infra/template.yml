@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: Cria uma instância ECS em uma subnet privada para ser usada como bastion host
+Description: Creates a DynamoDB Table
 
 Parameters:
 
