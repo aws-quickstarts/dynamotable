@@ -3,17 +3,15 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: Creates a DynamoDB Table
 
 Parameters:
-
   TableName:
     Type: String
     Default: Customer
-  
+
   Owner:
     Type: String
     Default: tg
 
 Resources:
-
   Table:
     Type: AWS::DynamoDB::Table
     Properties:
