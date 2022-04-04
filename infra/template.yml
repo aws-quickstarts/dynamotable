@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: Creates a DynamoDB Table
+Description: Creates a DynamoDB table
 
 Parameters:
   TableName:
@@ -26,6 +26,7 @@ Resources:
           KeyType: HASH
         - AttributeName: birth_at
           KeyType: RANGE
+      TableClass: STANDARD
       BillingMode: PAY_PER_REQUEST
       ProvisionedThroughput:
         ReadCapacityUnits: 0
